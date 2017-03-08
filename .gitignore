@@ -1,7 +1,8 @@
 *
-!.dist-ignore
+!.gitattributes
 !.gitignore
 !.github/
+!.bin/
 !README.markdown
 !application/modules/Sentry/
 application/modules/Sentry/vendor/

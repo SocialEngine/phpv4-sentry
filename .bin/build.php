@@ -18,4 +18,5 @@ $packageFileName = APPLICATION_PATH . '/application/packages/' . $package->getKe
 file_put_contents($packageFileName, $package->toString('json'));
 
 echo shell_exec('git add -f ' . $packageFileName);
-echo shell_exec('git status');
+echo shell_exec('ls -ala');
+
