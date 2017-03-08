@@ -3,4 +3,5 @@
 !.gitignore
 !.github/
 !README.markdown
-!application/modules/SERancher/
+!application/modules/Sentry/
+application/modules/Sentry/vendor/
