@@ -1,0 +1,6 @@
+*
+!.dist-ignore
+!.gitignore
+!.github/
+!README.markdown
+!application/modules/SERancher/
