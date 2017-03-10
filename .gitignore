@@ -3,6 +3,7 @@
 !.gitignore
 !.github/
 !README.markdown
+!LICENSE
 !application/libraries/Sentry/
 !application/modules/Sentry/
 application/libraries/Sentry/vendor/

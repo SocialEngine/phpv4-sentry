@@ -1,11 +1,35 @@
 <?php
+/**
+ * SocialEngine
+ *
+ * @category   Library_Sentry
+ * @package    Sentry
+ * @copyright  Copyright 2006-2017 Webligo Developments
+ * @license    http://www.socialengine.com/license/
+ */
 
+/**
+ * Class Sentry_Writer
+ */
 class Sentry_Writer extends Zend_Log_Writer_Abstract
 {
+    /**
+     * @var Raven_Client
+     */
     private static $sentry;
 
-    public static $message;
+    /**
+     * Stores the last error message written to the log.
+     *
+     * @var array
+     */
+    public static $message = array();
 
+    /**
+     * Sentry_Writer constructor.
+     *
+     * @param array $config
+     */
     public function __construct($config)
     {
         if (!self::$sentry) {
@@ -17,19 +41,24 @@ class Sentry_Writer extends Zend_Log_Writer_Abstract
             $errorHandler = new Raven_ErrorHandler(self::$sentry);
             $errorHandler->registerExceptionHandler();
 
-            register_shutdown_function(array($this, 'setErrorHandler'));
+            register_shutdown_function(array($this, 'setShutdownHandler'));
         }
     }
 
-    static public function factory($config)
+    /**
+     * @inheritdoc
+     */
+    public static function factory($config)
     {
         return new self($config);
     }
 
-    public function setErrorHandler()
+    /**
+     * Executes on shutdown and picks up if we have any final errors.
+     */
+    public function setShutdownHandler()
     {
         if (self::$message) {
-
             if (!class_exists('Raven_Stacktrace')) {
                 spl_autoload_call('Raven_Stacktrace');
             }
@@ -77,10 +106,12 @@ class Sentry_Writer extends Zend_Log_Writer_Abstract
             self::$sentry->captureMessage($message, array(), array(
                 'stacktrace' => $stack
             ));
-            //  self::$sentry->sendUnsentErrors();
         }
     }
 
+    /**
+     * @inheritdoc
+     */
     protected function _write($event)
     {
         $lines = explode("\n", trim($event['message']));
