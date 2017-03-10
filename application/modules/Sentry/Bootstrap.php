@@ -8,7 +8,12 @@
  * @license    http://www.socialengine.com/license/
  */
 
+/**
+ * Class Sentry_Bootstrap
+ *
+ * @codingStandardsIgnoreStart
+ */
 class Sentry_Bootstrap extends Engine_Application_Bootstrap_Abstract
 {
-
+    // @codingStandardsIgnoreEnd
 }

@@ -10,9 +10,13 @@
 
 /**
  * Class Sentry_Form_Admin_Settings_Global
+ *
+ * @codingStandardsIgnoreStart
  */
 class Sentry_Form_Admin_Settings_Global extends Engine_Form
 {
+    // @codingStandardsIgnoreEnd
+
     /**
      * Path to log.php file.
      *

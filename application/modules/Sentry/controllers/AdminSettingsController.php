@@ -8,8 +8,15 @@
  * @license    http://www.socialengine.com/license/
  */
 
+/**
+ * Class Sentry_AdminSettingsController
+ *
+ * @codingStandardsIgnoreStart
+ */
 class Sentry_AdminSettingsController extends Core_Controller_Action_Admin
 {
+    // @codingStandardsIgnoreEnd
+
     public function indexAction()
     {
         $this->view->form = $form = new Sentry_Form_Admin_Settings_Global();
