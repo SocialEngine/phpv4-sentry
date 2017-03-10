@@ -19,6 +19,7 @@ class Sentry_AdminSettingsController extends Core_Controller_Action_Admin
 
         if ($form->getClass() == 'Sentry_Writer') {
             $form->populate(array_filter(array(
+                'enabled' => $form->getConfig('enabled', false),
                 'dsn' => $form->getConfig('dsn'),
             )));
         }
