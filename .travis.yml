@@ -11,7 +11,8 @@ cache:
     - $HOME/.composer/cache
 
 before_script:
-  - composer install squizlabs/php_codesniffer
+  - composer install
 
 script:
   - vendor/bin/phpcs --standard=PSR2 -n application/libraries/Sentry/
+  - vendor/bin/phpcs --standard=PSR2 -n application/modules/Sentry/
