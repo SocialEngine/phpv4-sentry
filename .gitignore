@@ -4,6 +4,7 @@
 !.github/
 !README.markdown
 !LICENSE
+!.travis.yml
 !application/libraries/Sentry/
 !application/modules/Sentry/
 application/libraries/Sentry/vendor/
