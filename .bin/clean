@@ -1,0 +1,3 @@
+perl -pe 's/\r\n|\n|\r/\n/g' ./.bin/build > ./.bin/build.new && \
+  rm -f ./.bin/build && \
+  mv ./.bin/build.new ./.bin/build
