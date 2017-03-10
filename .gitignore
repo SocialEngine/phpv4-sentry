@@ -4,5 +4,6 @@
 !.github/
 !.bin/
 !README.markdown
+!application/libraries/Sentry/
 !application/modules/Sentry/
-application/modules/Sentry/vendor/
+application/libraries/Sentry/vendor/
