@@ -10,9 +10,13 @@
 
 /**
  * Class Sentry_Writer
+ *
+ * @codingStandardsIgnoreStart
  */
 class Sentry_Writer extends Zend_Log_Writer_Abstract
 {
+    // @codingStandardsIgnoreEnd
+
     /**
      * @var Raven_Client
      */
@@ -64,10 +68,10 @@ class Sentry_Writer extends Zend_Log_Writer_Abstract
             }
 
             $message = self::$message['message'];
+            $backtrace = self::$message['backtrace'];
             $stack = array();
 
             if (class_exists('Error', false)) {
-                $backtrace = self::$message['backtrace'];
                 foreach ($backtrace as $file) {
                     if (isset($file['function']) && $file['function'] == 'handleException' && isset($file['args'])) {
                         foreach ($file['args'] as $item) {
@@ -87,20 +91,26 @@ class Sentry_Writer extends Zend_Log_Writer_Abstract
                         }
                     }
                 }
+            }
 
-                if (isset(self::$message['exception'])) {
-                    $e = self::$message['exception'];
-                    if ($e instanceof Exception) {
-                        $trace = array_merge(array(array(
-                            'file' => $e->getFile(),
-                            'line' => $e->getLine()
-                        )), $e->getTrace());
+            if (isset(self::$message['exception'])) {
+                $e = self::$message['exception'];
+                if ($e instanceof Exception) {
+                    $trace = array_merge(array(array(
+                        'file' => $e->getFile(),
+                        'line' => $e->getLine()
+                    )), $e->getTrace());
 
-                        $stack = array(
-                            'frames' => Raven_Stacktrace::get_stack_info($trace)
-                        );
-                    }
+                    $stack = array(
+                        'frames' => Raven_Stacktrace::get_stack_info($trace)
+                    );
                 }
+            }
+
+            if (!$stack) {
+                $stack = array(
+                    'frames' => Raven_Stacktrace::get_stack_info($backtrace)
+                );
             }
 
             self::$sentry->captureMessage($message, array(), array(
@@ -111,15 +121,19 @@ class Sentry_Writer extends Zend_Log_Writer_Abstract
 
     /**
      * @inheritdoc
+     * @codingStandardsIgnoreStart
      */
     protected function _write($event)
     {
+        // @codingStandardsIgnoreEnd
+
         $lines = explode("\n", trim($event['message']));
         if (preg_match('/^Error Code: (.*?)$/i', $lines[0])) {
             unset($lines[0]);
         }
 
         $message = implode("\n", $lines);
+
         self::$message = array(
             'message' => $message,
             'backtrace' => debug_backtrace(),
