@@ -2,9 +2,6 @@
 
 SE_PATH="./../"
 
-rm -rf ./phpv4-sentry-master/
-unzip ./phpv4-sentry.zip -d ./
-
 rm -rf $SE_PATH/libraries/Sentry/
 rm -rf $SE_PATH/modules/Sentry/
 
