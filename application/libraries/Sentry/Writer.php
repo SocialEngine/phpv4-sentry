@@ -1,6 +1,6 @@
 <?php
 
-class Module_Sentry_Service_Writer extends Zend_Log_Writer_Abstract
+class Sentry_Writer extends Zend_Log_Writer_Abstract
 {
     private static $sentry;
 
@@ -10,7 +10,7 @@ class Module_Sentry_Service_Writer extends Zend_Log_Writer_Abstract
     {
         if (!self::$sentry) {
             if (!class_exists('Raven_Client', false)) {
-                require(__DIR__ . '/../vendor/autoload.php');
+                require(__DIR__ . '/vendor/autoload.php');
             }
 
             self::$sentry = new Raven_Client($config['dsn']);

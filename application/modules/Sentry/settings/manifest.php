@@ -22,6 +22,7 @@ return array(
         ),
         'directories' => array(
             'application/modules/Sentry',
+            'application/libraries/Sentry'
         )
     )
 );
