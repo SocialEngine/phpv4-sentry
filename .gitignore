@@ -2,7 +2,6 @@
 !.gitattributes
 !.gitignore
 !.github/
-!.bin/
 !README.markdown
 !application/libraries/Sentry/
 !application/modules/Sentry/
