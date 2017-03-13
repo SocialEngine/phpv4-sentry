@@ -6,6 +6,8 @@
 !LICENSE
 !.travis.yml
 !composer.json
+!package.json
 !application/libraries/Sentry/
 !application/modules/Sentry/
 !application/libraries/Sentry/vendor/
+!application/packages/module-Sentry-*

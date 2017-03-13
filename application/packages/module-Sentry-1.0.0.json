@@ -1,0 +1,611 @@
+{
+  "type": "module",
+  "name": "Sentry",
+  "version": "1.0.0",
+  "revision": null,
+  "path": "application\/modules\/Sentry",
+  "repository": null,
+  "date": "Mon, 13 Mar 2017 12:55:09 +0000",
+  "title": "Sentry",
+  "description": "Sentry",
+  "thumb": null,
+  "developer": null,
+  "authors": [
+    "Webligo Developments"
+  ],
+  "meta": {
+    "date": "Mon, 13 Mar 2017 12:55:09 +0000",
+    "title": "Sentry",
+    "description": "Sentry",
+    "developer": null,
+    "authors": [
+      "Webligo Developments"
+    ],
+    "changeLog": null
+  },
+  "actions": [
+    "install",
+    "upgrade",
+    "refresh",
+    "enable",
+    "disable"
+  ],
+  "callback": {
+    "path": "application\/modules\/Sentry\/settings\/install.php",
+    "class": "Sentry_Installer",
+    "priority": 100
+  },
+  "dependencies": null,
+  "tests": [
+    
+  ],
+  "permissions": [
+    
+  ],
+  "structure": {
+    "application\/modules\/Sentry": {
+      "type": "directory",
+      "path": "application\/modules\/Sentry",
+      "structure": [
+        {
+          "path": "Bootstrap.php",
+          "dir": false,
+          "file": true,
+          "perms": "0755",
+          "size": 367,
+          "sha1": "4ba981ea745d40d7206e35a051387182e14970c9"
+        },
+        {
+          "path": "controllers",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 102,
+          "sha1": null
+        },
+        {
+          "path": "controllers\/AdminSettingsController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0755",
+          "size": 1762,
+          "sha1": "8d6c692eb214919c1514c3e71905aa9fdcccbcd3"
+        },
+        {
+          "path": "Form",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 102,
+          "sha1": null
+        },
+        {
+          "path": "Form\/Admin",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 102,
+          "sha1": null
+        },
+        {
+          "path": "Form\/Admin\/Settings",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 102,
+          "sha1": null
+        },
+        {
+          "path": "Form\/Admin\/Settings\/Global.php",
+          "dir": false,
+          "file": true,
+          "perms": "0755",
+          "size": 3185,
+          "sha1": "561b78b9ede4eadeffcd9c9b8a08d3b2d23b35a3"
+        },
+        {
+          "path": "settings",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 170,
+          "sha1": null
+        },
+        {
+          "path": "settings\/install.php",
+          "dir": false,
+          "file": true,
+          "perms": "0755",
+          "size": 249,
+          "sha1": "fa961602a83f449258c3937e869816a39455e365"
+        },
+        {
+          "path": "settings\/manifest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 732,
+          "sha1": "de19799a1d1836a406753e1baf244a86894a46b5"
+        },
+        {
+          "path": "settings\/my.sql",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 416,
+          "sha1": "3fdb9063a52b713b419c6730d32c051235321caf"
+        },
+        {
+          "path": "views",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 102,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 102,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-settings",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 102,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-settings\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0755",
+          "size": 120,
+          "sha1": "501da3c1e2bcb595eae18174f0548bf58e8f15da"
+        }
+      ]
+    },
+    "application\/libraries\/Sentry": {
+      "type": "directory",
+      "path": "application\/libraries\/Sentry",
+      "structure": [
+        {
+          "path": "composer.json",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 59,
+          "sha1": "0a72dea11bdc16b35c3a284cd05c3e7ad6fbc494"
+        },
+        {
+          "path": "composer.lock",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2567,
+          "sha1": "3c8b560a66480a702b637e89f827a972fc729f31"
+        },
+        {
+          "path": "vendor",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 204,
+          "sha1": null
+        },
+        {
+          "path": "vendor\/autoload.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 185,
+          "sha1": "1bc2d39559d1938d6afcf29fb9575ff119fd0ac7"
+        },
+        {
+          "path": "vendor\/bin",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 102,
+          "sha1": null
+        },
+        {
+          "path": "vendor\/bin\/sentry",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2328,
+          "sha1": "05454c343dd8ab79abba8e4308641880ea3d7a9f"
+        },
+        {
+          "path": "vendor\/composer",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 340,
+          "sha1": null
+        },
+        {
+          "path": "vendor\/composer\/autoload_classmap.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 225,
+          "sha1": "875e1e82c1c8b7e11ebcda6cadfaf18d58ba88e4"
+        },
+        {
+          "path": "vendor\/composer\/autoload_namespaces.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 217,
+          "sha1": "e34bb33ef56a36e6b59d6bbbfff8b93501bb47de"
+        },
+        {
+          "path": "vendor\/composer\/autoload_psr4.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 152,
+          "sha1": "90379408df9945237cb3ff8cfc5f84d34455a8bd"
+        },
+        {
+          "path": "vendor\/composer\/autoload_real.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1814,
+          "sha1": "a48ff1712490b45d125e8e559dbdad16d9102ff8"
+        },
+        {
+          "path": "vendor\/composer\/autoload_static.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 888,
+          "sha1": "637ed0103de5d33c6c6118b1f7455963481f029a"
+        },
+        {
+          "path": "vendor\/composer\/ClassLoader.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 13689,
+          "sha1": "d666a35ca28e9e030ad2e0d5f2f3579fcb7423fa"
+        },
+        {
+          "path": "vendor\/composer\/installed.json",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1927,
+          "sha1": "12f8cfe9759faeea07c09735d732adebdbbf2a2d"
+        },
+        {
+          "path": "vendor\/composer\/LICENSE",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1096,
+          "sha1": "e2b97106c541af43cf72bbabaa552210b7beebe6"
+        },
+        {
+          "path": "vendor\/sentry",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 102,
+          "sha1": null
+        },
+        {
+          "path": "vendor\/sentry\/sentry",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 544,
+          "sha1": null
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/.gitattributes",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 67,
+          "sha1": "360fd6c0b5a444070680932ade9389ce98a7bcc1"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/.gitignore",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 65,
+          "sha1": "8c7ba3780f3ea751c7949469adafbf46163b0585"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/.gitmodules",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 112,
+          "sha1": "f3d21be3c5074f4356a4b974a303d702c05d354d"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/.php_cs",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 262,
+          "sha1": "2c8307ad3e88e084b1fcbddcc5e105aa368e2da4"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/.travis.yml",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 708,
+          "sha1": "965a6e19d63392a8e01b80b774d3f4074a006096"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/AUTHORS",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 162,
+          "sha1": "73c464d6ba47a57fb7a3b2a21f8c9dafac71d1d4"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/bin",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 102,
+          "sha1": null
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/bin\/sentry",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2328,
+          "sha1": "05454c343dd8ab79abba8e4308641880ea3d7a9f"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/CHANGES",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 4838,
+          "sha1": "3a3704ff53dfe95021184b4cb404cd9c64208367"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/composer.json",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 996,
+          "sha1": "b2bab70e7a6a03f46a6b6db2a0de62df98d224d2"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/lib",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 102,
+          "sha1": null
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/lib\/Raven",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 646,
+          "sha1": null
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/lib\/Raven\/Autoloader.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 976,
+          "sha1": "874995a2ebc795ef58158e65b1ed7e90800eff1b"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/lib\/Raven\/Breadcrumbs",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 136,
+          "sha1": null
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/lib\/Raven\/Breadcrumbs\/ErrorHandler.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1452,
+          "sha1": "6eba941d8a13116ee60cc18bb4f8cfdd5ffe506e"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/lib\/Raven\/Breadcrumbs\/MonologHandler.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3262,
+          "sha1": "da1adf0a2e514ffadab2912154530428d424081d"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/lib\/Raven\/Breadcrumbs.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1292,
+          "sha1": "2ba6fadb247d4c3ee5c89c273e47faca50f11e70"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/lib\/Raven\/Client.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 39921,
+          "sha1": "82f2255a3224f67ae7dd57ff3e91f07e948a7511"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/lib\/Raven\/Compat.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3750,
+          "sha1": "bd0319b76be83fa86876456c88237a563843059a"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/lib\/Raven\/Context.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 376,
+          "sha1": "8c1cf9755e732cd2098eb5bfc7a5267503e7978a"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/lib\/Raven\/CurlHandler.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3081,
+          "sha1": "088302e7acdfb8e6bb5f69564a301fde56a03e5d"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/lib\/Raven\/data",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 102,
+          "sha1": null
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/lib\/Raven\/data\/cacert.pem",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 320293,
+          "sha1": "0676d2471a51a37d78e28a6020f89f623913f66c"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/lib\/Raven\/ErrorHandler.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 6452,
+          "sha1": "7203b2dbdf5d5577f89bfac01666d0eff22d643c"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/lib\/Raven\/Exception.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 54,
+          "sha1": "7b5f967c93f81293f38cbbda0f94f9c12168f458"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/lib\/Raven\/Processor.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 417,
+          "sha1": "7ddcb0e4751cf06cbc3ad70f97857b608ecfb6ff"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/lib\/Raven\/ReprSerializer.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1281,
+          "sha1": "7d7a84de133551de1c282823f59557c8520b65a4"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/lib\/Raven\/SanitizeDataProcessor.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3815,
+          "sha1": "63c2fbc6422c0be42a242432b888b30b37cf9a2c"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/lib\/Raven\/Serializer.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 4178,
+          "sha1": "2d8e3d6da45b8ef7d623ea1e5c5e45d16cb13993"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/lib\/Raven\/Stacktrace.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 10765,
+          "sha1": "c61b089d8a70ca3ef0cc0214183599283e25f31e"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/lib\/Raven\/TransactionStack.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 971,
+          "sha1": "87ec990be601162264eadf52aa2650d6062c5947"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/lib\/Raven\/Util.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 636,
+          "sha1": "430a681b6d9159a6c3d5c38e4702959f756758ad"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/LICENSE",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1532,
+          "sha1": "3c6db3931885b7261f0717231280cd0cabdf7df1"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/Makefile",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 420,
+          "sha1": "97202562d88992a88ee160bc4a828cabfa73c883"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/phpunit.xml",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 647,
+          "sha1": "6582a3576ba65b34cc9995bd5ac5a5f5f9ee05c6"
+        },
+        {
+          "path": "vendor\/sentry\/sentry\/README.rst",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1262,
+          "sha1": "ec0f09df2340d778635f894aa4a900f7ae7e400e"
+        },
+        {
+          "path": "Writer.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 4039,
+          "sha1": "a2b33981d867991a6125a2a4995c80989c2775cd"
+        }
+      ]
+    }
+  }
+}
