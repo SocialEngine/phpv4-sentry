@@ -8,4 +8,4 @@
 !composer.json
 !application/libraries/Sentry/
 !application/modules/Sentry/
-application/libraries/Sentry/vendor/
+!application/libraries/Sentry/vendor/
